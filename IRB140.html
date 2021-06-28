@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>IRB140</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <nav>
+        <ul>
+            <li id="navb"><h2 style="font-weight: bold; color: white; margin-right: 15px;">Trabalho de Robótica</h2></li>
+            <li id="navb"><a href="TrabalhoFinalRobótica.html">HomePage</a></li>
+            <li id="navb"><a href="IRB140.html">Irb140</a></li>
+            <li id="navb"><a href="UR5.html">Ur5</a></li>
+        </ul>
+
+    </nav>
+    <h1 style="text-align: center; color: black; font-family:montserrat; margin-top: 100px;">Posições</h1>
+    <div class="plots">
+        <div class="plot">
+            <img src="plot(q1).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q1 = [0 0 0 0 0 0]
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q2).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q2 = [0 -pi/2 0 0 0 0]
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q3).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q3 = [0 -pi/2 pi/2 0 0 0]
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q4).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q4 = [0 -pi/2 pi/2 0 pi/2 0]
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q5).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q5 = [0 -pi/2 pi/2 0 pi/2 -pi/2]
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q6).jpg" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Coordenadas q6 = [0 -pi/2 pi/2 pi/2 pi/2 -pi/2]
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="text-align: center; color: black; font-family:montserrat; margin-top: 200px;">Movimentos e Rotações</h1>
+    <div class="plots">
+        <div class="plot">
+            <img src="plot(q12).gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Mudança de posição das juntas de q1 ([0 0 0 0 0 0]) para q2 ([0 -pi/2 0 0 0 0])
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q13).gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Mudança de posição das juntas de q1 ([0 0 0 0 0 0]) para q3 ([0 -pi/2 pi/2 0 0 0])
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q14).gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Mudança de posição das juntas de q1 ([0 0 0 0 0 0]) para q4 ([0 -pi/2 pi/2 0 pi/2 0])
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q15).gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Mudança de posição das juntas de q1 ([0 0 0 0 0 0]) para q5 ([0 -pi/2 pi/2 0 pi/2 -pi/2])
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="plot(q24).gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    Mudança de posição das juntas de q2 ([0 -pi/2 0 0 0 0]) para q4 ([0 -pi/2 pi/2 0 pi/2 0])
+                </p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; color: black; font-family:montserrat; margin-top: 200px;">Graphical User Interface (GUI)</h1>
+    <div class="plot__gui">
+        <div class="plot">
+            <img src="teach.gif" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>Usámos a função "teach" para mostrar o GUI. Iniciando na coordenada original (q1) conseguimos mover o robô a partir das juntas restantes</p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; color: black; font-family:montserrat; margin-top: 200px;">Parâmetros em estudo</h1>
+    <div class="plots">
+        <div class="plot">
+            <img src="mdl_irb140.PNG" alt="" class="plot__image">
+            <div class="plot__content">
+                <br>Os parâmetros de Denavit–Hartenberg são seis parâmetros associados a uma convenção para fixar sistemas de referência aos elos de uma cadeia cinemática espacial, ou manipulador robótico:
+                theta: ângulo em torno do z anterior, do x anterior até o x.
+                d: distância ao longo do z anterior até a normal comum.
+                a: comprimento da normal comum. No caso de uma junta rotacional, este é o raio ao redor do z anterior.
+                alpha: ângulo em torno da normal comum, do z anterior ao z novo.
+                <p>No "theta" todas as juntas são de rotação.</p>
+                <br>No a existem valores na junta 1 e 2, que é o raio ao redor do z anterior. A junta 3, junta 5 e junta 6 tem 0 de distância relativamente à junta anterior.
+                <p>Relativamente ao alpha podemos confirmar que a junta 2 e 6 são os únicos que não tem ângulo em torno da normal comum, do z anterior ao novo z</p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="fkine(q1).PNG" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>
+                    A função fkine da pose q3 tem a função de obter a transformação homogênea que representa a pose.
+                </p>
+            </div>
+        </div>
+        <div class="plot">
+            <img src="ikine_irb140.PNG" alt="" class="plot__image">
+            <div class="plot__content">
+                <p>Utilizámos a função ikine que representam as coordenadas conjuntas (1 x N) correspondentes à pose do efetor final do robô T (6x6)</p>
+            </div>
+        </div>
+    </div>
+    <h1 style="text-align: center; color: black; font-family:montserrat; margin-top: 200px;">Código IRB140</h1>
+    <div class="plot__gui">
+        <div class="plot">
+            <div class="plot__content">
+                <code style="color:rgb(0, 55, 175)">function r = mdl_irb140()</code>
+                <p></p>
+                <p style="color:red">%valores de comprimento do robô</p>
+                <code style="color:rgb(0, 55, 175)">d1 = 0.352;</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">a1 = 0.070;</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">a2 = 0.360;</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">d4 = 0.380;</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">d6 = 0.065;</code>
+                <p></p>
+                <p style="color:red">%tabela de parâmetros DH</p>
+                <p style="color:black">theta | d | a | alpha</p>
+                <code style="color:rgb(0, 55, 175)">dh = [0 d1 a1  -pi/2</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">          0 0  a2  0</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">          0 0  0   pi/2</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">          0 d4 0   -pi/2</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">          0 0  0   pi/2</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">          0 d6 0   pi/2];</code>
+                <p></p>
+                <p style="color:red">%serial link manipulator</p>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">robot = SerialLink(dh, 'name', 'IRB 140','manufacturer', 'ABB', 'ikine', 'nooffset');</code>
+                <p style="color:red">%colocar variáveis numa workspace global</p>
+                <code style="color:rgb(0, 55, 175)">if nargin == 1</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">r = robot;</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">elseif nargin == 0</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)"> assignin('caller', 'irb140', robot);</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)"> assignin('caller', 'qz', [0 0 0 0 0 0]);</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">assignin('caller', 'qd', [0 -90 180 0 0 -90]*deg);</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">assignin('caller', 'qr', [0 -90 90 0 90 -90]*deg);</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">end</code>
+                <p></p>
+                <code style="color:rgb(0, 55, 175)">end</code>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container2">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Trabalho realizado por:</h4>
+                    <ul id="footer">
+                        <li>Diogo Sousa - 30003344</li>
+                        <li>João Ramos - 30009954</li>
+                        <li>Mohammad Ussaid - 30003400</li>
+                        <li>Nuno Saraiva - 30003653</li>
+                        <li>Pedro Meireles - 30003673</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Docente:</h4>
+                    <ul id="footer">
+                        <li><a href="https://autonoma.pt/docentes/laercio-junior/">Laércio Cruvinel</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Universidade:</h4>
+                    <ul id="footer">
+                        <li><a href="https://autonoma.pt">Universidade Autónoma de Lisboa</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>       
+</body>
+</html>
